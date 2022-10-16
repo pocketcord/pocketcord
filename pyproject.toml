@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pocketcord"
+version = "0.1.0"
+description = ""
+authors = ["teaishealthy <teaishealthy@protonmail.com>"]
+license = "ISC"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+quart = "^0.18.3"
+disfake = {git = "https://github.com/teaishealthy/disfake"}
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+pyright = "^1.1.275"
+isort = "^5.10.1"
+pre-commit = "^2.20.0"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.isort]
+profile = "black"
+combine_as_imports = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
